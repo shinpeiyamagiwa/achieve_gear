@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/リポジトリ名',
-  assetPrefix: '/リポジトリ名',
+  basePath: '/achieve_gear',
+  assetPrefix: '/achieve_gear',
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig
