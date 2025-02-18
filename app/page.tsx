@@ -265,7 +265,7 @@ export default function LandingPage() {
                     AchieveGearプレミアムプラン
                   </h3>
                   <p className="mt-4 text-3xl font-extrabold text-gray-900">
-                    30,000円{" "}
+                    10,000円{" "}
                     <span className="text-base font-medium text-gray-500">
                       / 月
                     </span>
