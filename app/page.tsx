@@ -104,7 +104,7 @@ export default function LandingPage() {
             </h2>
             <ul className="space-y-6 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
               {[
-                "立てた目標を達成できない",
+                "たてた目標を達成できない",
                 "継続することがなかなかできない",
                 "目標に向かって一歩を踏み出せない",
               ].map((concern, index) => (
@@ -189,7 +189,7 @@ export default function LandingPage() {
                   {
                     name: "専属によるサポート",
                     description:
-                      "経験豊富な専属コンサルタントが、あなたの目標達成をきめ細かくサポートします。",
+                      "経験豊富な専属サポートメンバーが、あなたの目標達成をきめ細かくサポートします。",
                   },
                   {
                     name: "パーソナライズされた戦略立案",
@@ -292,7 +292,7 @@ export default function LandingPage() {
                 シンプルな料金プラン
               </h2>
               <p className="mt-4 text-xl text-gray-600">
-                専属コンサルタントによる確実な目標達成サポートを、お手頃な月額料金で。
+                月額10,000円で、継続できる自分になれます。
               </p>
             </div>
             <div className="mt-12 max-w-lg mx-auto">
@@ -310,8 +310,11 @@ export default function LandingPage() {
                   <p className="mt-1 text-sm text-gray-500">
                     *年間契約の場合、2ヶ月分無料
                   </p>
-                  <Button className="mt-8 block w-full bg-orange-500 text-white">
-                    無料相談を予約する
+                  <Button
+                    className="mt-8 block w-full bg-orange-500 text-white"
+                    asChild
+                  >
+                    <a href="/consultation">無料相談を予約する</a>
                   </Button>
                 </div>
                 <div className="pt-6 pb-8 px-6">
@@ -352,17 +355,12 @@ export default function LandingPage() {
                 {
                   question: "AchieveGearはどのように機能しますか？",
                   answer:
-                    "AchieveGearでは、まず専属コンサルタントがあなたと面談し、目標と現状を詳しく分析します。その後、パーソナライズされた目標達成戦略を一緒に作成し、定期的な進捗確認と戦略調整を行いながら、目標達成までサポートします。",
-                },
-                {
-                  question: "専属コンサルタントとはどのような人ですか？",
-                  answer:
-                    "AchieveGearの専属コンサルタントは、目標達成や個人開発の分野で豊富な経験を持つプロフェッショナルです。各分野のエキスパートが、あなたの目標に合わせて最適なサポートを提供します。",
+                    "AchieveGearでは、まず専属コンサルタントがあなたと面談し、目標と現状を詳しく分析します。その後、あなたにあった目標達成戦略を一緒に作成し、定期的な進捗確認と戦略調整を行いながら、目標達成までサポートします。",
                 },
                 {
                   question: "週次の進捗確認はどのように行われますか？",
                   answer:
-                    "週次の進捗確認は、オンラインビデオ通話または電話で行われます。約30分間のセッションで、前週の進捗を確認し、次週の計画を立てます。必要に応じて戦略の微調整も行います。",
+                    "希望によりますが、週次の進捗確認は、オンラインビデオ通話または電話で行われます。前週の進捗を確認し、次週の計画を立てます。必要に応じて戦略の微調整も行います。",
                 },
                 {
                   question: "契約期間の縛りはありますか？",
