@@ -72,11 +72,11 @@ export default function LandingPage() {
           <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block">あなたの目標を</span>{" "}
-                <span className="block text-orange-500 ">確かな現実へ</span>
+                <span className="block">目標達成ができない</span>{" "}
+                <span className="block text-orange-500">あなたへ</span>
               </h1>
               <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl">
-                専属コンサルタントがあなたの目標達成をサポート。パーソナライズされた戦略と進捗管理で、夢を現実に変えます。
+                専任であなたの目標達成をサポート。パーソナライズされた戦略と進捗管理で、夢を現実に変えます。
               </p>
               <div className="mt-5 sm:mt-8 flex flex-col sm:flex-row sm:gap-4">
                 <Button
@@ -104,9 +104,9 @@ export default function LandingPage() {
             </h2>
             <ul className="space-y-6 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
               {[
-                "一人ではなかなか継続して頑張れない",
-                "学習サポートのサービスはあるが高くて手をつけられない",
-                "誰かに見られないとなかなか継続できない",
+                "立てた目標を達成できない",
+                "継続することがなかなかできない",
+                "目標に向かって一歩を踏み出せない",
               ].map((concern, index) => (
                 <li key={index} className="flex items-start">
                   <div className="flex-shrink-0">
@@ -131,15 +131,52 @@ export default function LandingPage() {
           </div>
         </div>
 
+        {/* 原因セクション */}
+        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">
+              なぜ目標達成できないのか？
+            </h2>
+            <div className="mt-10 space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8">
+              {[
+                {
+                  title: "明確な計画がない",
+                  description:
+                    "具体的なアクションプランや達成までのロードマップが不明確なため、何から始めればよいかわからない状態になっています。",
+                },
+                {
+                  title: "適切なフィードバックがない",
+                  description:
+                    "進捗状況を客観的に評価し、必要な軌道修正をアドバイスしてくれる人がいないため、同じ失敗を繰り返してしまいます。",
+                },
+                {
+                  title: "モチベーション維持が難しい",
+                  description:
+                    "一人では継続的なモチベーション維持が難しく、途中で挫折してしまいがちです。",
+                },
+              ].map((reason) => (
+                <div key={reason.title} className="text-center">
+                  <h3 className="text-lg font-medium text-gray-900 mb-4">
+                    {reason.title}
+                  </h3>
+                  <p className="text-base text-gray-500">
+                    {reason.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Features Section */}
-        <div id="features" className="py-12 bg-white">
+        <div id="features" className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:text-center">
               <h2 className="text-base text-orange-500 font-semibold tracking-wide uppercase">
-                特徴
+                サポート内容
               </h2>
               <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                専属コンサルタントによる確実な目標達成
+                専任サポーターによる確実な目標達成
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
                 AchieveGearは、あなたの目標達成を全力でサポートします。
@@ -150,7 +187,7 @@ export default function LandingPage() {
               <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                 {[
                   {
-                    name: "専属コンサルタントによるサポート",
+                    name: "専属によるサポート",
                     description:
                       "経験豊富な専属コンサルタントが、あなたの目標達成をきめ細かくサポートします。",
                   },
