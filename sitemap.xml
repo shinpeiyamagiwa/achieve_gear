@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://achievegear.jp/</loc>
-<lastmod>2025-02-25T03:11:23.699Z</lastmod>
-<changefreq>weekly</changefreq>
+<loc>https://achievegear.com</loc>
+<lastmod>2025-03-12T15:16:45.210Z</lastmod>
+<changefreq>yearly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://achievegear.jp/consultation</loc>
-<lastmod>2025-02-25T03:11:23.699Z</lastmod>
-<changefreq>weekly</changefreq>
+<loc>https://achievegear.com/consultation</loc>
+<lastmod>2025-03-12T15:16:45.210Z</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 </urlset>
