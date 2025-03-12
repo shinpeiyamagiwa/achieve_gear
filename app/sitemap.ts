@@ -1,18 +1,19 @@
-import type { MetadataRoute } from "next";
+import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://achievegear.jp/",
+      url: "https://achievegear.com",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "yearly",
       priority: 1,
     },
     {
-      url: "https://achievegear.jp/consultation",
+      url: "https://achievegear.com/consultation",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 0.8,
     },
+    // 他のページも必要に応じて追加
   ];
 }

@@ -1,5 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight, Menu } from "lucide-react";
+import {
+  NegativeIcon,
+  type NegativeIconProps,
+} from "@/components/NegativeIcon";
 
 export default function LandingPage() {
   return (
@@ -56,80 +60,78 @@ export default function LandingPage() {
       </header>
 
       <main>
-        {/* Hero Section */}
-        <div className="relative min-h-[80vh] flex items-center">
-          {/* Background image with overlay */}
-          <div className="absolute inset-0">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202025-02-15%2013.09.07.jpeg-MMVs08RQKuUbD1A9qaa0IcgFASuhjR.png"
-              alt="プロフェッショナルビジネスチーム"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent" />
-          </div>
+        <div className="relative h-[700px]">
+          {/* ヒーローセクションの背景画像部分を修正 */}
+          <img
+            src="pixta_85808238_L.png"
+            alt="プロフェッショナルビジネスチーム"
+            className="absolute inset-0 w-full h-[700px] object-contain object-[110%_center]"
+          />
+          {/* 全体にグラデーションオーバーレイを適用 */}
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/90 to-orange-500/75 mix-blend-multiply" />
 
-          {/* Content */}
-          <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block">目標達成ができない</span>{" "}
-                <span className="block text-orange-500">あなたへ</span>
-              </h1>
-              <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl">
-                専任であなたの目標達成をサポート。パーソナライズされた戦略と進捗管理で、夢を現実に変えます。
-              </p>
-              <div className="mt-5 sm:mt-8 flex flex-col sm:flex-row sm:gap-4">
-                <Button
-                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 md:py-4 md:text-lg md:px-10"
-                  asChild
-                >
-                  <a href="/consultation">無料相談</a>
-                </Button>
-                <Button
-                  variant="outline"
-                  className="mt-3 sm:mt-0 w-full sm:w-auto flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-orange-500 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
-                >
-                  詳しく見る
-                </Button>
-              </div>
+          {/* コンテンツ部分により良い配置と余白を追加 */}
+          <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <span className="block">目標達成ができない</span>
+              <span className="block mt-2">あなたへ</span>
+            </h1>
+            <p className="mt-6 max-w-lg text-xl text-orange-100 sm:max-w-3xl">
+              AchieveGearの専任サポーターがあなたの目標達成をサポートします。
+              実績豊富な専門家による的確なアドバイスで、成長への近道を見つけましょう。
+            </p>
+            <div className="mt-10">
+              <Button
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-orange-600 bg-white hover:bg-orange-50 transition-colors duration-200 shadow-lg hover:shadow-xl"
+                asChild
+              >
+                <a href="/consultation">
+                  無料相談を予約する
+                  <ArrowRight
+                    className="ml-2 -mr-1 h-5 w-5"
+                    aria-hidden="true"
+                  />
+                </a>
+              </Button>
             </div>
           </div>
         </div>
 
         {/* 悩みセクション */}
-        <div className="bg-orange-50 py-16 px-4 sm:px-6 lg:px-8">
+        {/* <div className="bg-orange-50 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">
               こんな悩みはありませんか？
             </h2>
             <ul className="space-y-6 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
               {[
-                "たてた目標を達成できない",
-                "継続することがなかなかできない",
-                "目標に向かって一歩を踏み出せない",
+                {
+                  icon: "thinking",
+                  text: "たてた目標を達成できない",
+                },
+                {
+                  icon: "confused",
+                  text: "継続することがなかなかできない",
+                },
+                {
+                  icon: "worried",
+                  text: "目標に向かって一歩を踏み出せない",
+                },
               ].map((concern, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <svg
-                      className="h-6 w-6 text-orange-500"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                      />
-                    </svg>
-                  </div>
-                  <p className="ml-3 text-base text-gray-700">{concern}</p>
+                <li
+                  key={index}
+                  className="flex flex-col items-center text-center"
+                >
+                  <NegativeIcon
+                    type={concern.icon as NegativeIconProps["type"]}
+                    className="w-40 h-40 mb-4"
+                  />
+                  <p className="text-base text-gray-700">{concern.text}</p>
                 </li>
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
 
         {/* 原因セクション */}
         <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
@@ -242,12 +244,12 @@ export default function LandingPage() {
                 {
                   role: "起業家",
                   content:
-                    "AchieveGearの専属コンサルタントのおかげで、6ヶ月以内に起業することができました。的確なアドバイスと進捗管理が本当に役立ちました！",
+                    "AchieveGearの専任サポーターのおかげで、6ヶ月以内に起業することができました。的確なアドバイスと進捗管理が本当に役立ちました！",
                 },
                 {
                   role: "主婦",
                   content:
-                    "AchieveGearのサポートで、長年できなかったダイエットに成功しました。専属コンサルタントの励ましと的確なアドバイスが、モチベーション維持に大きく貢献しました。",
+                    "AchieveGearのサポートで、長年できなかったダイエットに成功しました。専任サポーターの励ましと的確なアドバイスが、モチベーション維持に大きく貢献しました。",
                 },
                 {
                   role: "自営業",
@@ -323,7 +325,7 @@ export default function LandingPage() {
                   </h4>
                   <ul className="mt-6 space-y-4">
                     {[
-                      "専属コンサルタントによる個別サポート",
+                      "専任サポーターによる個別サポート",
                       "パーソナライズされた目標達成戦略",
                       "週次の進捗確認と調整",
                       "24時間サポートチーム",
@@ -355,7 +357,7 @@ export default function LandingPage() {
                 {
                   question: "AchieveGearはどのように機能しますか？",
                   answer:
-                    "AchieveGearでは、まず専属コンサルタントがあなたと面談し、目標と現状を詳しく分析します。その後、あなたにあった目標達成戦略を一緒に作成し、定期的な進捗確認と戦略調整を行いながら、目標達成までサポートします。",
+                    "AchieveGearでは、まず専任サポーターがあなたと面談し、目標と現状を詳しく分析します。その後、あなたにあった目標達成戦略を一緒に作成し、定期的な進捗確認と戦略調整を行いながら、目標達成までサポートします。",
                 },
                 {
                   question: "週次の進捗確認はどのように行われますか？",
@@ -393,7 +395,7 @@ export default function LandingPage() {
               <span className="block">あなたの目標を確実な達成へ</span>
             </h2>
             <p className="mt-4 text-lg leading-6 text-orange-200">
-              AchieveGearの専属コンサルタントがあなたの目標達成をサポートします。
+              AchieveGearの専任サポーターがあなたの目標達成をサポートします。
             </p>
             <Button
               className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-orange-500 bg-white hover:bg-gray-50 sm:w-auto"
