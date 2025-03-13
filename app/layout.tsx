@@ -17,7 +17,8 @@ export const metadata: Metadata = {
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202025-02-15%2014.38.23.jpeg-jj0J9UW8ivclW1C8NeKLy0fICClEKm.png",
   },
   openGraph: {
-    title: "AchieveGear - 専属サポートメンバーによる目標達成支援サービス",
+    title:
+      "目標達成、継続できないあなたへ！専属サポートメンバーによる目標達成支援サービス",
     description:
       "専属サポートメンバーがあなたの目標達成をサポート。あなたに合った方法と進捗管理で、夢を現実に変えます。",
     images: [
