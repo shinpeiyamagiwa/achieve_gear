@@ -22,10 +22,10 @@ export const metadata: Metadata = {
       "専属サポートメンバーがあなたの目標達成をサポート。あなたに合った方法と進捗管理で、夢を現実に変えます。",
     images: [
       {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202025-02-15%2013.09.07.jpeg-MMVs08RQKuUbD1A9qaa0IcgFASuhjR.png",
+        url: "/top_image.png",
         width: 1200,
         height: 630,
-        alt: "AchieveGear - 継続、目標達成ができないあなたへ、目標達成支援サービス",
+        alt: "継続、目標達成ができないあなたへ、目標達成支援サービス",
       },
     ],
   },
